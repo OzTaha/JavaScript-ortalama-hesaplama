@@ -1,3 +1,3 @@
 # JavaScript-ortalama-hesaplama
 
-![Alt Text](gif/ortalama hesaplama.gif)
+![Alt Text](gif/ortalama_hesaplama.gif)

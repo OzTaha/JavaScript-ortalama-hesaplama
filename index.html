@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/hesaplama.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ortalama Hesaplama</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
+      <form id="calculateForm" action="#">
         <h1>Not Ortalaması ve Harf Notu Hesaplama</h1>
-            <label>Vize</label>  
-                <input type="number" id="vize">
-                <br>
-                <br>
-            <label>Final</label> 
-                <input type="number" id="final">
-                <br>
-                <br>
-            <button id="hesapla">Hesapla</button>
-        <div id="sonuc" style="font-size: larger;"></div>
+
+        <fieldset>
+          <label for="midterm">Vize</label>
+          <input
+            type="number"
+            id="midterm"
+            name="midterm"
+            min="0"
+            max="100"
+            placeholder="Lütfen 0 ile 100 arasında bir sayı girin."
+            oninvalid="this.setCustomValidity('Lütfen 0 ile 100 arasında bir sayı girin.')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="final">Final</label>
+          <input
+            type="number"
+            id="final"
+            id="name"
+            min="0"
+            max="100"
+            placeholder="Lütfen 0 ile 100 arasında bir sayı girin."
+            oninvalid="this.setCustomValidity('Lütfen 0 ile 100 arasında bir sayı girin.')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+        </fieldset>
+
+        <button type="submit">Hesapla</button>
+
+        <div id="result"></div>
+      </form>
     </div>
-<script src="js/hesaplama.js"></script>
-</body>
+    <script src="js/calculate.js"></script>
+  </body>
 </html>

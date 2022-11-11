@@ -1,3 +1,7 @@
+:root {
+    --default-space: 30px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -19,7 +23,8 @@ body {
     margin-top: 250px;
 }
 
-.container, input {
+.container,
+input {
     padding: 10px;
     display: flex;
 }
@@ -28,20 +33,19 @@ h1 {
     padding-bottom: 20px;
 }
 input {
-    border:2px solid rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
     background-color: rgba(230, 230, 230, 0.6);
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
     outline: none;
-    text-align: center;
     transition: 0.7s;
 }
 input:focus {
     background-color: rgb(205, 236, 247);
 }
-input:hover{
-    background-color:  #dfe1e1 ;
+input:hover {
+    background-color: #dfe1e1;
 }
 label {
     font-size: 24px;
@@ -51,8 +55,17 @@ button {
     width: 100%;
     font-size: 18px;
     height: 2.5rem;
-    border:2px solid rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    margin-bottom: var(--default-space);
 }
 button:hover {
-   background-color:  #dfe1e1 ;
+    background-color: #dfe1e1;
+}
+fieldset {
+    margin-bottom: var(--default-space);
+    border: none;
+}
+#result {
+    font-size: larger;
+    text-align: center;
 }
